@@ -1,0 +1,4 @@
+dbt-core>=1.12,<2.0
+dbt-duckdb>=1.11,<2.0
+duckdb>=2.0,<3.0
+streamlit>=1.66,<2.0
