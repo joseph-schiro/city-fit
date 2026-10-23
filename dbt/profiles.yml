@@ -1,0 +1,7 @@
+city_fit:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../city_fit.duckdb
+      threads: 4

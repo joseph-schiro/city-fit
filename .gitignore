@@ -222,3 +222,7 @@ __marimo__/
 # DuckDB
 *.duckdb
 *.duckdb.wal
+
+# DBT
+dbt/target/
+dbt/logs/

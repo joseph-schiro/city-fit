@@ -1,0 +1,11 @@
+name: city_fit
+version: "1.0.0"
+profile: city_fit
+model-paths: ["models"]
+
+models:
+  city_fit:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
