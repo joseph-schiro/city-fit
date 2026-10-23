@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_census_places
+    columns:
+      - name: geoid
+        data_tests:
+          - unique
+          - not_null
+      - name: state_fips
+        data_tests:
+          - not_null
+      - name: place_fips
+        data_tests:
+          - not_null
+      - name: place_name
+        data_tests:
+          - not_null

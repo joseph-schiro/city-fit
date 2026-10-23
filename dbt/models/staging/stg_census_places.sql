@@ -14,10 +14,10 @@ cleaned as (
         state as state_fips,
         place as place_fips,
         NAME as place_name,
-        CASE WHEN B01003_001E::INTEGER < 0 THEN NULL ELSE CAST(B01003_001E AS INTEGER) END as total_population,
-        CASE WHEN B19013_001E::INTEGER < 0 THEN NULL ELSE CAST(B19013_001E AS INTEGER) END as median_household_income,
-        CASE WHEN B25064_001E::INTEGER < 0 THEN NULL ELSE CAST(B25064_001E AS INTEGER) END as median_gross_rent,
-        CASE WHEN B25077_001E::INTEGER < 0 THEN NULL ELSE CAST(B25077_001E AS INTEGER) END as median_home_value
+        {{ clean_census_value('B01003_001E') }} as total_population,
+        {{ clean_census_value('B19013_001E') }} as median_household_income,
+        {{ clean_census_value('B25064_001E') }} as median_gross_rent,
+        {{ clean_census_value('B25077_001E') }} as median_home_value
     from source
 )
 
