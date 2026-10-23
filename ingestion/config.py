@@ -14,6 +14,8 @@ CENSUS_VARIABLES = {
     "B25077_001E": "median_home_value",
 }
 REQUEST_TIMEOUT_SECONDS = 30
+DUCKDB_PATH = "city_fit.duckdb"
+RAW_PLACES_TABLE = "raw_census_places"
 
 
 def get_census_api_key() -> str:
